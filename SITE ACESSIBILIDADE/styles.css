@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+/* Adicionando uma fonte elegante para o corpo do texto que contrasta com Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap'); 
+
+:root {
+    --vermelho-destaque: #D90429; /* Vermelho forte para destaque */
+    --preto-racionais: #2B2D42;   /* Quase preto, tom escuro */
+    --cinza-claro: #EDF2F4;      /* Cinza muito claro, quase branco */
+    
+    /* Variáveis de Alto Contraste */
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #ffd700; /* Amarelo ouro para links */
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Merriweather', serif; /* Nova fonte mais elegante e legível */
+    background-color: var(--cinza-claro);
+    color: var(--preto-racionais);
+}
+
+/* --- HEADER E NAVEGAÇÃO --- */
+.cabecalho {
+    background-color: var(--preto-racionais);
+    color: var(--cinza-claro);
+    /* Adicionando um box-shadow sutil para elegância */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    color: var(--vermelho-destaque);
+    font-size: 2.5rem;
+    letter-spacing: 3px; /* Aumentando o espaçamento para mais impacto */
+}
+
+.nav-racionais .nav-link {
+    color: var(--cinza-claro);
+    font-weight: 700;
+    transition: color 0.3s;
+    letter-spacing: 1px; /* Mais elegância no menu */
+}
+
+.nav-racionais .nav-link:hover {
+    color: var(--vermelho-destaque);
+}
+
+/* NOVO ESTILO PARA MENU MOBILE */
+.menu-mobile {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro */
+}
+.menu-mobile .nav-link {
+    color: var(--cinza-claro);
+    font-weight: 700;
+}
+
+
+/* --- SEÇÃO HERO --- */
+.hero-racionais {
+    background-image: url('img/racionais-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    min-height: 550px;
+    border-radius: 20px;
+    position: relative;
+    /* Overlay mais escuro para maior contraste e elegância */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.75); 
+}
+
+.esquerda-conteudo h2 {
+    font-family: 'Oswald', sans-serif;
+    /* Ajustando o text-shadow para um visual mais refinado */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); 
+    font-weight: 900;
+}
+
+.botao-saiba-mais {
+    background-color: var(--vermelho-destaque);
+    border-radius: 5px;
+    border: none;
+    width: 12em; /* Deixando o botão maior */
+    height: 3em;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.botao-saiba-mais:hover {
+    background-color: #A30322; /* Um vermelho um pouco mais escuro no hover */
+}
+
+
+/* --- SEÇÕES GERAIS --- */
+.titulo-secao {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8em; /* Título maior */
+    color: var(--vermelho-destaque);
+    border-left: 5px solid var(--preto-racionais);
+    padding-left: 15px; /* Mais padding para o destaque */
+    margin-bottom: 25px;
+}
+
+#historia {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 4rem 0; /* Mais padding vertical */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil para flutuação */
+}
+
+/* NOVO ESTILO PARA A HISTÓRIA (largura total) */
+.container-historia {
+    max-width: 900px; /* Limita a largura para melhor legibilidade */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.paragrafo-historia {
+    font-family: 'Merriweather', serif; /* Mantendo a fonte de texto elegante */
+    line-height: 1.7; /* Mais espaçamento entre linhas */
+    margin-bottom: 20px;
+    /* CORREÇÃO DE BUG AQUI: Mudança de 'rem' para 'em' para herdar o tamanho do body */
+    font-size: 1.05em; 
+    text-align: justify;
+}
+
+/* NOVO ESTILO DA IMAGEM FLUTUANTE (ELEGÂNCIA) */
+.imagem-historia-flutuante {
+    float: right; /* Flutua a imagem para a direita */
+    width: 40%; /* Tamanho razoável */
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0 10px 25px; /* Espaçamento: Top, Right, Bottom, Left */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    transition: filter 0.3s ease; /* Para a transição no alto contraste */
+}
+
+/* Media query para telas menores (mobile) */
+@media (max-width: 768px) {
+    .imagem-historia-flutuante {
+        float: none; /* Não flutua no mobile */
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 20px 0; /* Centraliza verticalmente */
+    }
+}
+
+
+/* GALERIA INALTERADA */
+#galeria {
+    background-color: var(--preto-racionais);
+    color: var(--cinza-claro);
+    padding-bottom: 5rem;
+}
+
+.album-img {
+    transition: transform 0.3s ease;
+}
+
+.album-img:hover {
+    transform: scale(1.05);
+}
+
+/* --- RODAPÉ --- */
+.rodape {
+    background-color: var(--preto-racionais);
+    color: var(--cinza-claro);
+    font-size: 1rem; /* Deixando o rodapé um pouco menor e mais discreto */
+}
+
+.rodape i {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: var(--vermelho-destaque);
+}
+
+
+/* ------------------------------------------------------------------- */
+/* --- CÓDIGO DE ACESSIBILIDADE (CORREÇÃO DE BUG E ESTILO DE IMAGEM) --- */
+/* ------------------------------------------------------------------- */
+
+.menu-acessibilidade {
+    position: relative; 
+}
+
+/* ANIMAÇÃO SUAVE: Transição mais longa para mais elegância */
+.animacao-acessibilidade {
+    transition: opacity 0.4s ease, transform 0.4s ease; /* 0.4s */
+    opacity: 0;
+    transform: translateY(5px); /* Movendo um pouco para baixo no fade-in */
+    transform-origin: right center;
+}
+
+/* CLASSE DE VISIBILIDADE ATIVA: */
+.animacao-acessibilidade.mostra {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Garantindo que o 'X' tenha o mesmo estilo dos outros botões de função */
+.opcoes-acessibilidade button {
+    margin-bottom: 0;
+    background-color: var(--vermelho-destaque);
+    border: none;
+    color: var(--cinza-claro); /* Cor do texto no botão */
+    font-size: 1rem;
+}
+
+
+/* --- ESTILOS DE ALTO CONTRASTE --- */
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
+}
+
+.alto-contraste .cabecalho,
+.alto-contraste .rodape,
+.alto-contraste .formulario,
+.alto-contraste #historia {
+    background-color: var(--alto-contraste-fundo) !important;
+    color: var(--alto-contraste-texto) !important;
+}
+
+/* CORREÇÃO DE BUG: Força o texto dentro da história a ser visível (branco) */
+.alto-contraste .paragrafo-historia {
+    color: var(--alto-contraste-texto) !important;
+}
+
+
+.alto-contraste .nav-link,
+.alto-contraste .titulo-secao,
+.alto-contraste .rodape i,
+.alto-contraste .logo,
+.alto-contraste a { /* Garante links legíveis em qualquer lugar */
+    color: var(--alto-contraste-link) !important;
+}
+
+.alto-contraste .botao-saiba-mais,
+.alto-contraste .botao-enviar,
+.alto-contraste .btn-primary,
+.alto-contraste .opcoes-acessibilidade button {
+    /* Garante que todos os botões (incluindo o 'X') fiquem Amarelo Ouro */
+    background-color: var(--alto-contraste-link) !important;
+    color: var(--alto-contraste-fundo) !important;
+    border: 2px solid var(--alto-contraste-fundo) !important;
+}
+
+.alto-contraste .hero-racionais {
+    background-image: none !important; 
+    box-shadow: none !important;
+    background-color: var(--alto-contraste-fundo) !important;
+}
+
+/* ESTILO DE IMAGEM NO ALTO CONTRASTE */
+.alto-contraste .imagem-historia-flutuante {
+    /* ELEGÂNCIA: Desatura e adiciona uma borda em alto contraste */
+    filter: grayscale(100%) contrast(120%); 
+    border: 2px solid var(--alto-contraste-link) !important;
+    box-shadow: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo) !important;
+}
+
+.alto-contraste .form-control {
+    background-color: #333333 !important;
+    color: var(--alto-contraste-texto) !important;
+}
